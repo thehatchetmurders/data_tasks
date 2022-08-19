@@ -1,0 +1,14 @@
+version: "4.7.0"
+services:
+  script:
+    image: python
+  db:
+    postgres:
+    image: postgres:13.0
+    environment:
+      POSTGRES_DB: "cars"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "admin"
+    ports:
+      - "5432:5432"
+
